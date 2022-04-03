@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="./lib/vue.js"></script>
+    <link rel="stylesheet" href="../主页面/CSS/主页面.css">
+    <script src="../主页面/JavaScript/主页.js"></script>    
+</head>
+<body>
+    <div id="box">
+        <div id="navbar">
+          <button class="log-in">
+            <a href="../登录注册界面/登录注册界面.html">登录</a>
+          </button>
+          <button class="register">
+            <a href="../登录注册界面/登录注册界面.html">注册</a>
+          </button>
+        </div>
+        <div id="content">
+          <div id="profile" v-show='isShow'>
+            <div id="user_img">
+              <i class="iconfont icon-shousuo" @click="handleShow()" ></i>
+              <img src="../目标网站logo/4d1790621a4c10d63004f6d3ab4cc63d.jpeg" alt="">
+            </div>
+            <div id="user_main">
+              <ul>
+                <li> <a href=""><i class="iconfont icon-assign"style="margin-right:12px;font-size:20px"></i>我的任务</a></li>
+                <li><a href="#"><i class="iconfont icon-lishijilu" style="margin-right:12px;font-size:18px"></i> 历史记录</a></li>
+                <li><a href="#"><i class="iconfont icon-gerenzhongxin" style="margin-right:10px;; font-size:22px;"></i> 个人中心</a></li>
+                <li><a href="#"><i class="iconfont icon-xiugaimima" style="margin-right: 10px; font-size:20px;"></i> 修改密码</a></li>
+                <li><a href="#"><i class="iconfont icon-group" style="margin-right:11px;font-size: 21px"></i>关于我们</a></li>
+              </ul>
+            </div>
+            <div id="control">
+              <div>用户ID</div>
+            </div>
+          </div>
+          <div id="icon_font" v-show='icon_show'>
+              <div><i class="iconfont icon-zhankai" @click="handleShow()" ></i></div>
+              <ul>
+                <li><a href="#"><i class="iconfont icon-assign"style="margin-right:12px;font-size:20px"></i></a></li>
+                <li><a href="#"><i class="iconfont icon-lishijilu" style="margin-right:12px;font-size:18px"></i></a></li>
+                <li><a href="#"><i class="iconfont icon-gerenzhongxin" style="margin-right:10px;; font-size:22px;"></i></a></li>
+                <li><a href="#"><i class="iconfont icon-xiugaimima" style="margin-right: 10px; font-size:20px;"></i></a></li>
+                <li><a href="#"><i class="iconfont icon-group" style="margin-right:11px;font-size: 21px"></i></a></li>
+              </ul>
+            </div>
+          <div id="main" :style="'width:' +(isShow?'calc(100% - 200px)':'calc(100% - 0px)')">
+            <div id="logo">
+              <img src="../目标网站logo/快爬鹿.png" alt="">
+              <h2>
+                  欢迎使用
+                  <span style="color:#78b4ec">快鹿爬</span>
+              </h2>
+              <p>操作简单 精准快速</p>
+            </div>
+            <div id="search">
+                <input type="text" v-model='mytext' value="" placeholder="请输入要采集的网址、网站名称">
+                <button type="submit" @click="handleClick()" >开始采集</button>
+            </div>
+            <div>
+              <div id="gather_model">
+                <div>
+                    <p><b><a href="#" style="color:#025bde;cursor:default;">▎</a>热门采集模板</b></p>
+                    <span><a href="#" style="color:#025bde;font-size: 12px">更多>></a></span>
+                </div>
+                <ul   >
+                    <li>
+                        <a href="http:www.baidu.com"><img src="../目标网站logo/1235927892_-447491088_121_121.jpg" alt="">
+                        <p>Boss直聘</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/58b1cad1c4a08c514890662123345c55.jpeg" alt="">
+                        <p>前程无忧</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/515c9aa5afe775d992853101cb262505.jpeg" alt="">
+                        <p>智联招聘</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/6994cbb4844792756dfe15e0d56553a9.jpg" alt="">
+                        <p>猎聘网</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/429be40f3795cc7e4918907fdd94e5d8.jpg" alt="">
+                        <p>拉钩招聘</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/a479c5d29e007ac6f403e08ab87e6b11.jpg" alt="">
+                        <p>看准网</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/u=494124334,1782405944&fm=74&app=80&size=f256,256&n=0&f=JPEG&fmt=auto.webp" alt="">
+                        <p>淘宝</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/u=861288555,1591836781&fm=58.jpg" alt="">
+                        <p>京东</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/735498ee7d4e8663ebd6af6d174d130c.jpeg" alt="">
+                        <p>拼多多</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/6f31f73303fce399facf78006de55095.jpeg" alt="">
+                        <p>豆瓣网</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/589abcbde7e41279b99bcd75707f59d5.jpeg" alt="">
+                        <p>新浪微博</p></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../目标网站logo/7cddb19b0f8356e634ed13fa81aa6c51.jpeg" alt="">
+                        <p>东方财富</p></a>
+                    </li>
+                </ul>
+              </div>
+              <div id="comment">
+                <div>
+                    <b><a href="#" style="color:#025bde;cursor:default">▎</a>热门评论</b>
+                    <span><a href="#" style="color:#025bde;font-size: 12px">更多>></a></span>
+                </div>
+                <ul :style="'padding-right:' +(isShow?'2%':'15%')" > 
+                  <li>
+                    <div>
+                        <img src="../目标网站logo/bc6ae45c65cb9698e34baebace141e23.jpeg" alt="">
+                        <div>
+                         <a href="">南派三叔</a>:
+                          <span>这是一条非常重要的评论，有多重要我也不知道</span>
+                        </div>
+                        <ul>
+                          <li>
+                              <span>2022-03-24 30:55</span>
+                          </li>
+                          <li>
+                            <p>
+                                <i class="iconfont icon-dianzan"></i>
+                                <span>100</span>
+    
+                            </p>
+                          </li>
+                        </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="../目标网站logo/bc6ae45c65cb9698e34baebace141e23.jpeg" alt="">
+                        <div>
+                          <a href="">杨过</a>:
+                          <span>这是一条非常重要的评论，有多重要我也不知道</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>2022-03-24 30:55</span>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-dianzan"></i>
+                                <span>100</span>
+                            </li>
+                          </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="../目标网站logo/bc6ae45c65cb9698e34baebace141e23.jpeg" alt="">
+                        <div>
+                          <a href="">我吃西红柿我不知道</a>:
+                          <span>这是一条非常重要的评论，有多重要我也不知道，好吧，他真的特别重要比谁都重要，呵呵哈哈哈</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>2022-03-24 30:55</span>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-dianzan"></i>
+                                <span>100</span>
+                            </li>
+                          </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+      <script src="../主页面/JavaScript/Vue.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+*{margin: 0px;padding: 0px;}
+a{text-decoration: none;color:black}
+a:hover{color:orange}
+#navbar{width: 100%; height: 40px;background-color:whitesmoke;position:fixed;z-index: 99;}
+#navbar button{height: 30px;width: 60px;border-radius: 3px;position: absolute;}
+#navbar .log-in{right: 80px;top:3px;background-color: white;border:1px solid white; }
+#navbar .register{background-color:blue;right: 10px;top:3px; border: 1px solid blue;color: white}
+#navbar button a{display:block;height: 30px;width: 60px;text-align: center;margin: 3px 0px;}
+
+#profile{width: 13%;height: calc(100% - 40px);float: left;background-color: #384b71;position:fixed;top:40px;}
+#user_img{width: 100%;height:25%; position: relative;}
+#user_img img{display: block;width: 70%; height: 78%; border-radius: 100%;margin: 5% auto;}
+#user_img i{position: absolute;right: 1px;top:-9px;font-size: 28px;color:white;background-color: rgba(0,0,0,0.2);width: 35px;height: 35px;text-align: center;line-height: 35px;}
+#user_img i:hover{cursor: pointer;color: orange}
+#user_main{width: 100%;}
+#user_main ul{text-align: center;margin-top:2px;}
+#user_main ul li{line-height: 45px;font-size: 14px;}
+#user_main ul li a{color: rgba(255,255,255,0.7)}
+#user_main ul li a:hover{color: orange}
+#control{width: 100%;height: 30px;text-align: center;line-height: 30px;color: white;margin-top: 200px}
+
+#icon_font{width: 4%;height: 900px;position: fixed;left: 0px;;background-color: #384b71;z-index: 9;}
+#icon_font div{width: 100%;height: 8%;margin-top: 32%;text-align: center;line-height: 80px;}
+#icon_font div i{font-size: 28px;color:white;background-color: rgba(0,0,0,0.2);width: 30px;height: 30px}
+#icon_font div i:hover{cursor: pointer;color: orange}
+#icon_font ul li{width: 100%;height: 10%;text-align: center;line-height: 130px;color: white}
+#icon_font ul li a{color: white}
+#icon_font ul li a:hover{color:orange}
+
+
+#main{float: right;width: calc(100% - 200px);height: 100%;text-align: center;position: relative;}
+#logo{width:calc(100% - 200px);height: 155px; position: relative;position:fixed;top: 40px;background-color: white}
+#logo img{display: block;height: 110px;width:110px;text-align: center;margin: 0px auto;}
+#logo h2{position: absolute;left: 54%;top:35px;font-size: 18px;}
+#logo p{position: absolute;left: 55%;top:70px;font-size: 13px;}
+#search{width:calc(100% - 200px);height: 35px; position:fixed;top:195px;background-color: white}
+#search input{display: block; width: 40%;height: 30px;margin: 0px auto;border-radius: 3px;border:1px solid rgb(109, 109, 131,0.5);color: black;}
+#search input::-webkit-input-placeholder{color:rgb(109, 109, 131,0.5);}
+#search input:focus{border-style:solid;outline:1px solid blue;box-shadow: 0 0 5px #03a9f4;}
+#search button{display: block;position: absolute;left: 69.8%;top:0px;width: 10%;height: 32px;background-color: blue;color: white;padding: 0px;margin: 0px; border-radius: 3px;text-align: center;border: 1px solid blue;outline-style: none;}
+#gather_model{width: calc(100% - 200px);height: 302px;position: fixed;top:230px;background-color: white}
+#gather_model div{position: relative;width: 100%;height: 30px;}
+#gather_model div p{position: absolute;left: 18%;top: 2px}
+#gather_model div span{position: absolute;right: 15%;top:2px}
+#gather_model ul{padding: 10px 0px 10px 70px;width: 75%;height: 240px;display: block;margin: 2px auto;}
+#gather_model ul li img{width: 60px ;height: 60px;border-radius:15px;display: block;margin: 9px auto	 }
+#gather_model ul li {float: left;list-style: none;margin: 18px 0px 10px 48px;display: block;width: 100px;height: 100px;text-align: center}
+#gather_model ul li:hover{background-color:rgba(0,0,0,0.2);border-radius:4px;}
+#gather_model ul li p{text-align: center;margin: 5px;font-size: 14px;color: gray}
+#comment{width: 100%;height: 200px; }
+#comment div{width:calc(100% - 200px);height: 35px;position: fixed;top:532px;background-color: white}
+#comment div b{position: absolute;left: 18%;top: 2px}
+#comment div span{position: absolute;right: 15%;top:2px}
+#comment ul{width: 67%;height: 200px;margin: 2px auto;text-align: center;padding-right: 2%}
+#comment ul li {list-style: none; width: 100%;}
+#comment-first{margin-top:0px;background-color: black}
+#comment ul li div{width: 100%;height: 82px;position: relative;z-index: -1;margin-left: 32px;margin-top: 10px;}
+#comment ul li:first-child div{padding-top: 29px;}
+#comment ul li:first-child div img{height: 60%;margin-top:27px}
+#comment ul li div img{display: block;width:8%;height: 80%;border-radius: 100%;position: absolute;top:1px;left: 1px;}
+#comment ul li div div{position: absolute;top:2px;right:2px;width: 90%;height: 48%;margin: 0;text-align: left}
+#comment ul li div div span{width: auto;height: auto;position:static;}
+#comment ul li div ul {width: 90%;height: 38%;position: absolute;bottom: 2px;right: 2px;
+padding: 0px}
+#comment ul li div ul li i{font-size: 24px;position: absolute;right: 40px;top:0px;border-radius: 100%}
+#comment ul li div ul li i:hover{background-color: rgba(0,0,0,0.2)}
+#comment ul li div ul li span:nth-child(1){position: absolute;left: 2px;bottom:0px;text-align: left;margin-top:3px; }
+#comment ul li div ul li span:nth-child(2){position: absolute;right: 2px;bottom: 2px;}

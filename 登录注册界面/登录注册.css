@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    /* 弹性布局 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(150, 150, 150, 0.1);
+}
+
+.container {
+    background-color: #fff;
+    width: 650px;
+    height: 415px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.form-box {
+    position: absolute;
+    background-color: #78b4ec;
+    width: 325px;
+    height: 415px;
+    border-radius: 10px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 增加层级，浮在上层 */
+    z-index: 99;
+    /* 动画过渡，曲线时间函数 */
+    transition: 0.5s ease-in-out;
+}
+
+.register-box,.login-box {
+    /* 弹性布局 垂直居中 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* 隐藏块，默认隐藏注册页 */
+.hidden {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+
+    /* 字间距 */
+    letter-spacing: 15px;
+}
+
+input {
+    /* 输入框设置透明背景 */
+    background-color: transparent;
+
+    width: 65%;
+    color: #fff;
+    border: none;
+    /* 下边框样式 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+    text-indent: 10px;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+/* 输入框获取焦点样式 */
+input:focus {
+    color: #fff;
+    outline: none;
+    border-bottom: 1px solid #d1d1d1;
+    transition: 0.5s;
+}
+
+/* 点进输入框使提示字体透明化 */
+input:focus::placeholder {
+    opacity: 0.45;
+}
+
+.form-box button {
+    width: 65%;
+    margin-top: 35px;
+    background-color: #fff;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2086e6;
+    letter-spacing: 3px;
+    border: none;
+    /* 移入鼠标变成点击光标 */
+    cursor: pointer;
+}
+
+/* 登录/注册按钮移入时的样式 */
+.form-box button:hover {
+    background-color: #227fd6;
+    color: #f6f6f6;
+    transition: 0.4s ease;
+}
+
+.btm-box {
+    width: 50%;
+    /* 弹性布局 垂直居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    /* 向上平移50% */
+    transform: translateY(-50%);
+}
+
+/* 开启定位,以左边为起点 */
+.btm-box.left {
+    left: 0;
+}
+/* 开启定位,以右边为起点 */
+.btm-box.right {
+    right: 0;
+}
+
+.btm-box h2 {
+    color: #848ea0;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.btm-box span {
+    color: #78b4ec;
+}
+
+.btm-box p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #848ea0;
+    text-align: center;
+}
+
+.btm-box img {
+    width: 150px;
+    height: 150px;
+    opacity: 0.9;
+    margin: 35px 0;
+}
+
+/* 去注册/去登陆按钮样式 */
+.btm-box button {
+    margin-top: 3%;
+    background-color: #fff;
+    color: #78b4ec;
+    border: 1px solid #78b4ec;
+    padding: 6px 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btm-box button:hover {
+    background-color: #78b4ec;
+    color: #fff;
+}

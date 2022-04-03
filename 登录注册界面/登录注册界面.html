@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>爬虫登录注册界面</title>
+    <link rel="stylesheet" href="./登录注册.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 表单容器 -->
+        <div class="form-box">
+
+            <!-- 注册 -->
+            <div class="register-box hidden">
+                <h1>注册</h1>
+                <input type="text" placeholder="用户名">
+                <input type="password" placeholder="密码">
+                <input type="password" placeholder="确认密码">
+                <button>注册</button>
+            </div>
+
+            <!-- 登录 -->
+            <div class="login-box">
+                <h1>登录</h1>
+                <input type="text" placeholder="用户名">
+                <input type="password" placeholder="密码">
+                <button>登录</button>
+            </div>
+        </div>
+        <div class="btm-box left">
+            <h2>欢迎使用<span>智能爬虫</span></h2>
+            <p>简单操作<span>精准</span>快速</p>
+            <img src="./Python.webp">
+            <p>已有账号</p>
+            <button id="login">去登录</button>
+        </div>
+        <div class="btm-box right">
+            <h2>欢迎使用<span>智能爬虫</span></h2>
+            <p>操作简单 精准快速</p>
+            <img src="./Python.webp">
+            <p>没有账号?</p>
+            <button id="register">去注册</button>
+        </div>
+    </div>
+    <script>
+        'use strict'
+        // 获取元素
+        let login = document.getElementById('login');
+        let register = document.getElementById('register');
+        let form_box = document.getElementsByClassName('form-box')[0];
+        let register_box = document.getElementsByClassName('register-box')[0];
+        let login_box = document.getElementsByClassName('login-box')[0];
+
+        // 去注册按钮点击事件
+        register.onclick = function(){
+            // 点击后，表单向右平移
+            form_box.style.transform = 'translateX(100%)';
+            // 点击后，隐藏登录块
+            login_box.classList.add('hidden');
+            // 点击后，显示注册块
+            register_box.classList.remove('hidden');
+        }
+        // 去登录按钮点击事件
+        login.onclick = function(){
+            // 点击后，表单向左平移
+            form_box.style.transform = 'translateX(0%)';
+            // 点击后隐藏注册块
+            register_box.classList.add('hidden');
+            // 点击后显示登录块
+            login_box.classList.remove('hidden');
+        }
+
+
+    </script>
+</body>
+
+</html>
